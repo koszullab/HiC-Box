@@ -26,7 +26,7 @@ class main_frame(wx.Frame):
         
         self.panel = wx.Panel(self)
 
-        self.title = wx.StaticText(self.panel, wx.ID_ANY, _("Alignment Toolbox"), style=wx.ALIGN_CENTRE)
+        self.title = wx.StaticText(self.panel, wx.ID_ANY, _("HiC-Box"), style=wx.ALIGN_CENTRE)
         
         self.bank_folder_label = wx.StaticText(self.panel, wx.ID_ANY, _("Output folder"))
         self.bank_folder = wx.TextCtrl(self.panel, wx.ID_ANY, "", size = (300,-1))

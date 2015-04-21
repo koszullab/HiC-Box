@@ -919,7 +919,7 @@ class MainWindow(wx.Frame):
         self.select_mode = False
         
     def __set_properties(self):
-        self.SetTitle(_("Pyramid Toolbox"))
+        self.SetTitle(_("HiC-Box"))
         self.SetSize((350, 120))
         self.button_loader.SetMinSize((150, 27))
         self.Status_dir[0].SetMinSize((149, 17))

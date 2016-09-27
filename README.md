@@ -8,7 +8,6 @@ Python packages
 * scipy
 * matplotlib
 * h5py
-* pp (Parallel Processing)
 * Biopython
 * pymongo
 * mirnylib (https://bitbucket.org/mirnylab/mirnylib)

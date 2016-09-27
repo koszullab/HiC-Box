@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-_
 _author__ = 'hervemn'
 import os
-import pp
 import glob
 import fastq_alignment
 import shutil
 import hic_analysis
 import gephi_lib
-#import pyglet
+
 class hic_exp():
     def __init__(self, name, tot_len_read, folder_a, folder_b,motif_read_1,motif_read_2,paired_wise_fastq,restriction_site,ncpu,len_tag,genome_index, genome_fasta, bowtie2,looping,
                  quality_min,output_folder,speed,len_paired_wise_fastq):
@@ -34,14 +33,6 @@ class hic_exp():
         self.quality = quality_min
         self.len_tag = len_tag
         self.speed_looping = speed
-        
-        try:
-            music = pyglet.resource.media('align.ogg')
-            music.play()
-            
-            pyglet.app.run()
-        except:
-            print "Can't play align.ogg"
 
         #### define restriction map ####
         self.file_contig_txt = os.path.join(output_folder,'list_contig_names.txt')
@@ -130,7 +121,6 @@ class hic_exp():
         paired_wise_fastq = self.paired_wise_fastq
         jobs = []
         ppservers = ()
-        job_server = pp.Server(ncpu_pp, ppservers=ppservers)
         print self.bowtie2
         print self.paired_files
         for paired_file in self.paired_files:

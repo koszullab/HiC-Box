@@ -55,3 +55,14 @@ Visualizer options
 * Matrices can be manually loaded "raw" (from a text file) and binned, but no genome information will be displayed.
 * "Kb binning" will regroup bins such that the total length of each bin is closest to 10kb.
 * The norm called *sparsity* is an alias for fragment-wise order 1 normalization.
+
+Output templating
+=================
+
+The box is designed to go through all steps of a typical Hi-C pipeline, from alignment to visualization or a possible reassembly by [GRAAL](http://github.com/koszullab/GRAAL). However, if you wish to customize the alignment step, you may directly provide a sam file named **0.sam** in the output folder. HiC-Box will skip the alignment part and proceed to the contact matrix generation.
+
+
+
+
+
+

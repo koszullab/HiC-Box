@@ -34,7 +34,7 @@ How to use
 * Run main.py
 * Choose output folder
 * Load a fasta genome
-* Build bowtie index (bowtie path must be specified in the advanced options or a bowtie folder must be in the main folder)
+* Make sure a bowtie index is built and placed in a directory named "index" within the main folder; this can be done automatically by clicking on *index* (bowtie path must be specified in the advanced options or a bowtie folder must be in the main folder)
 * Load fastq paired-end read files
 * Load restriction enzyme (or manually type in the site sequence)
 * Check advanced parameters and tweak if needed

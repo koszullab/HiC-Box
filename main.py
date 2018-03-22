@@ -12,7 +12,10 @@ from gettext import install
 import main_window
 from shutil import rmtree, move
 from matplotlib import pyplot as plt
-from scipy import weave
+try:
+    from scipy import weave
+except ImportError:
+    import weave
 
 ## By default toolbox and working directories are the same 
 toolbox_directory = os.path.dirname(os.path.abspath(__file__))

@@ -1,6 +1,5 @@
 __author__ = 'hervemn'
 # coding: utf-8
-# -*- coding: UTF-8 -*-
 import os
 import shutil
 import h5py
@@ -204,7 +203,6 @@ def build(base_folder,size_pyramid, factor, min_bin_per_contig=1):
 def fill_sparse_pyramid_level(pyramid_handle, level, contact_file, nfrags):
 
     print "here we go"
-#     p = ProgressBar('green', width=20, block='▣', empty='□')
 
     sparse_dict = dict()
     h = open(contact_file, "r")
@@ -263,7 +261,6 @@ def fill_sparse_pyramid_level(pyramid_handle, level, contact_file, nfrags):
 #     """ fill a pyramid level """
 #     i = 1
 #     print "here we go"
-#     p = ProgressBar('green', width=20, block='▣', empty='□')
 #     chunk_points = xrange(0,nfrags,size_chunk)
 #     n_chunk_points = len(chunk_points)
 #     for t in chunk_points:
@@ -539,7 +536,6 @@ def remove_problematic_fragments(contig_info, fragments_list, abs_fragments_cont
 
     import numpy as np
 
-#     p = ProgressBar('blue', width=20, block='▣', empty='□')
 
     # full_resolution = pyramid["0"]
     level = pyramid["0"]
@@ -630,7 +626,6 @@ def remove_problematic_fragments(contig_info, fragments_list, abs_fragments_cont
     tmp_cumul = {'start_pos':0,'end_pos': 0,'chrom':0,'size':0,'accu_frag':0,'gc_content':[],'lock': False,'init_id_frags':[] ,'list_chrom':[]}
     ######################################
     step = 0
-#     p = ProgressBar('blue', width=20, block='▣', empty='□')
     while 1:
         line_fragment = handle_fragments_list.readline()
         if not line_fragment:
@@ -757,7 +752,6 @@ def remove_problematic_fragments(contig_info, fragments_list, abs_fragments_cont
 
     handle_new_abs_fragments_contacts.write("%s\t%s\t%s\t%s\t%s\n"%('id_read_a','id_read_b','w_length','w_gc','w_sub_sample'))
     all_lines_contact = handle_abs_fragments_contacts.readlines()
-#     p = ProgressBar('blue', width=20, block='▣', empty='□')
     step = 0
     for id_line_contacts in xrange(1, len(all_lines_contact)):
         line_contacts = all_lines_contact[id_line_contacts]
@@ -776,7 +770,6 @@ def remove_problematic_fragments(contig_info, fragments_list, abs_fragments_cont
             handle_new_abs_fragments_contacts.write("%s\t%s\t%s\t%s\t%s\n"%(str(new_abs_id_frag_a),str(new_abs_id_frag_b),
                                                                             w_size, w_gc, str(w_sub_sample)))
 #     handle_abs_fragments_contacts.readline()
-#     p = ProgressBar('blue', width=20, block='▣', empty='□')
 #     step = 0
 #     while 1:
 #         line_contacts = handle_abs_fragments_contacts.readline()

@@ -61,7 +61,10 @@ Output templating
 
 The box is designed to go through all steps of a typical Hi-C pipeline, from alignment to visualization or a possible reassembly by [GRAAL](http://github.com/koszullab/GRAAL). However, if you wish to customize the alignment step, you may directly provide a sam file named **0.sam** in the output folder. HiC-Box will skip the alignment part and proceed to the contact matrix generation.
 
+Troubleshooting
+===============
 
+* Currently the PCR duplicate/tag detection step is very unoptimized and may crash the box if there are too many reads. For this reason (and because filtering/trimming reads on the fly every time can be clunky anyway) it is preferable that you trim and filter your reads prior to launching the pipeline. An example of script that does this can be found [here](https://github.com/koszullab/DADE/blob/master/pcr_duplicate_Hiseq.pl). Once your reads are prepared, be sure to set *tag length* to 0 in the options.
 
 
 

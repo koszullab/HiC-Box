@@ -1,7 +1,7 @@
 HiC-Box
 =======
 
-**HiC-Box** is a HiC data processing pipeline and visualizer, written mostly in Python. It uses bowtie2 as a backend to align input paired-end reads onto an input genome, and derives a contact map from the alignment data and the position of restriction sites along the genome (the restriction enzyme is also given as input).
+**HiC-Box** is a HiC data processing pipeline and visualizer, written mostly in Python (as of 2018, it is only compatible to Python 2; with deprecation coming up in 2020, work is undergoing to convert it to Python 3). It uses bowtie2 as a backend to align input paired-end reads onto an input genome, and derives a contact map from the alignment data and the position of restriction sites along the genome (the restriction enzyme is also given as input).
 
 The restriction fragments are then binned (and the corresponding matrix sum-pooled) at different scales, hence building a *pyramid*. Each *level* of the pyramid is a contact map at a different resolution. Each such level can be browsed with the box.
 
@@ -19,7 +19,9 @@ Python packages
 * h5py
 * Biopython
 * pymongo
-* mirnylib (https://bitbucket.org/mirnylab/mirnylib)
+* [mirnylib](https://bitbucket.org/mirnylab/mirnylib)
+* cython (mirnylib dependency)
+* wxpython
 * networkx
 
 Other software
